@@ -1,7 +1,7 @@
 <?php
 namespace Countries;
 
-use mysqli as mysgli;
+use mysqli as mysqli;
 
 
 class CountriesRepository
@@ -10,7 +10,7 @@ class CountriesRepository
 
     public function __construct()
     {
-        $this->conn = new \mysqli('YOUR_HOST', 'YOUR_USERNAME', 'YOUR_PASSWORD', 'YOUR_DB');
+        $this->conn = new mysqli('YOUR_HOST', 'YOUR_USERNAME', 'YOUR_PASSWORD', 'YOUR_DB');
     }
 
     public function getByCurrency($currency)
