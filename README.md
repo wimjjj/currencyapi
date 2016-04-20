@@ -2,6 +2,6 @@
 
 REST API with data about currency
 
-##Made with:
+###Made with:
 * Slim
 * Fixer API
