@@ -29,6 +29,9 @@ $app->get('/exchangerate/{curr1}/{curr2}', function($request, $response, $args){
     return $response->write(json_encode((new Currency())->getExchangeRate($args['curr1'], $args['curr2'])));
 });
 
+$app->get('/countries', function($request, $response, $args){
+    return $response->write(json_encode((new Countries())->addCurrency('fads')));
+});
 
 
 $app->run();
