@@ -35,21 +35,4 @@ class CountriesRepository
     {
         $sql = "INSERT INTO countries (name, currency_id) VALUES ('" . $this->conn->real_escape_string($name) . "', '" . $this->conn->real_escape_string($currency_id) . "');";
     }
-
-    private function executeQuerie($sql)
-    {
-        if (!$result = $this->conn->query($sql)) {
-            return ['error' => $this->conn->error];
-        }
-
-        $return = [];
-
-        while ($row = $result->fetch_assoc()) {
-            $return[] = $row;
-        }
-
-        $this->conn->close();
-
-        return $return;
-    }
 }
